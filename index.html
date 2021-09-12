@@ -10,7 +10,8 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+<!-- animation css link -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,28 +19,33 @@
 </head>
 
 <body>
+  <!-- header start -->
   <header></header>
+    <!-- header start -->
+      <!-- main start -->
   <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+     <div class="search-field-container ">
+      <h1 class="title" data-aos="fade-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"data-aos-delay="200"><span>Nirub</span>-shoping</h1>
+      <div class="search-box" data-aos="fade-down"  data-aos-duration="1000" data-aos-easing="ease-in-out"data-aos-delay="200">
+        <input id="input-field" placeholder="Search for the product of your choice" class="search-field" type="text" />
+        <button type="button" class="btn" id="search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
       </div>
-    </div>
+    </div> 
     <div class="row">
+      <h1 id="main-title" data-aos="zoom-in-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"data-aos-delay="200">Your best choice</h1>
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+        <div id="all-products" class="" data-aos="zoom-in-up"  data-aos-duration="1000" data-aos-easing="ease-in-out"data-aos-delay="300">
+         
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h1><span>My</span>-Cart</h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -50,7 +56,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,16 +86,22 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn text-center" id="buy-btn">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
+      <!-- main end -->
+
   <footer></footer>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
