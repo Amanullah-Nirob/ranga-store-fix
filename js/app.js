@@ -6,8 +6,6 @@ const loadProducts = () => {
 };
 // local object function area end=======================================================================================================
 
-
-
 // show all product in UI 
 const showProducts = (products) => {
   // map use in products 
